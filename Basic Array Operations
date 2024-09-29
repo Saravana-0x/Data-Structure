@@ -1,4 +1,4 @@
-include<stdio.h>
+#include<stdio.h>
 #define max 5
 int currentsize=0;
 int isfull(){
