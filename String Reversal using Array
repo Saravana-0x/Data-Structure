@@ -1,0 +1,36 @@
+#include <stdio.h>
+#include <string.h>
+#define MAX 20
+char s[MAX];
+int top = -1;
+
+void push(char c) {
+    if (top == MAX - 1) {
+        printf("s overflow on push\n");
+    } else {
+        s[++top] = c;
+    }
+}
+
+char pop() {
+    if (top == -1) {
+        printf("s underflow on pop\n");
+    } else {
+        return s[top--];
+    }
+}
+
+int main() {
+    char s[MAX];
+    printf("Enter the string to reverse: ");
+    scanf("%s", s);
+    int length = strlen(s);
+    for (int i = 0; i < length; i++) {
+        push(s[i]);
+    }
+    for (int i = 0; i < length; i++) {
+        s[i] = pop();
+    }
+    printf("Reversed string: %s\n", s);
+    return 0;
+}
