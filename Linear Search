@@ -1,0 +1,41 @@
+#include<stdio.h>
+
+#int main() {
+int a[20], found= 0, i, n, j;
+
+printf("Enter the size of array: "); 
+scanf("%d", &n);
+
+printf("Enter the numbers: ");
+for(i=0; i < n; i++) {
+
+scanf("%d", &a[i]);
+
+}
+
+printf("Enter the number to search: "); 
+scanf("%d", &j);
+
+for(i=0; i < n; i++) {
+
+if(a[i] == j) 
+{ 
+found = 1;
+
+break;
+
+}
+
+
+if(found== 1) {
+
+printf("Element is found at index %d\n", i);
+
+} 
+else {
+
+printf("Element is not found\n");
+
+}
+
+return 0;
